@@ -504,6 +504,9 @@ int main(void)
                         // Set the valid bit.
                         (p->second).second = true;
 
+			// Set the value of frame
+			(p->second).first = unallocated_frame;
+
                         // Allocate the unallocated_frame in RAM.
                         ram[unallocated_frame] = make_pair(pid, page);
                     }
